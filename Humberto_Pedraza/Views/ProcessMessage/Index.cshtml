@@ -1,0 +1,57 @@
+﻿@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+
+    var name = Request["contactersName"];
+    var subject = Request["subject"];
+    var message = Request["message"];
+    var email = Request["email"];
+    var errorMessage = "";
+    var debuggingFlag = false;
+    try
+    {
+        // Initialize WebMail helper
+        WebMail.SmtpServer = "smtp.gmail.com";
+        WebMail.SmtpPort = 25;
+        WebMail.EnableSsl = true;
+        WebMail.UserName = "hpedraza2333";
+        WebMail.Password = "Betobeto233_";
+        WebMail.From = "hpedraza2333@gmail.com";
+
+        // Send email
+        WebMail.Send(to: "hpedraza2333@gmail.com",
+            subject: subject,
+            body: name + " - contacts you: " + message + " \n Email-contact: " + email
+        );
+    }
+    catch (Exception ex)
+    {
+        errorMessage = ex.Message;
+    }
+}
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Request for Assistance</title>
+</head>
+<body>
+    <p>Thanks for messaging me, <b>@name</b>!</p>
+    @if (errorMessage == "")
+    {
+        <p>
+            I will get back to you within 24 hours as I do check my email at least once a day.
+        </p>
+        <p><b>@message</b></p>
+    }
+    else {
+        <p><b>The email was <em>not</em> sent.</b></p>
+        <p>
+            Please make sure all fields were properly filled out, if so please email me at hpedraza2333@gmail.com that way I can resolve the issue. Thank you.
+        </p>
+        if (debuggingFlag)
+        {
+            <p>The following error was reported:</p>
+            <p><em>@errorMessage</em></p>
+        }
+    }
+</body>
+</html>

@@ -1,0 +1,506 @@
+﻿body {
+	padding-top: 50px;
+	padding-bottom: 20px;
+
+}
+object{
+	margin-left: auto;
+	margin-right: auto;
+}
+
+
+.jumbotron{
+  background: -webkit-radial-gradient(circle, yellow 2%, yellow 1% , deepskyblue 98%); /* Safari */
+  background: -o-radial-gradient(circle, yellow 2%, yellow 1% , deepskyblue 98%); /* Opera 11.6 to 12.0 */
+  background: -moz-radial-gradient(circle, yellow 2%, yellow 1% , deepskyblue 98%); /* Firefox 3.6 to 15 */
+  background: radial-gradient(circle, yellow 2%, yellow 1% , deepskyblue 98%); /* Standard syntax */
+}
+
+/* Set padding to keep content from hitting the edges */
+.body-content {
+	padding-left: 15px;
+	padding-right: 15px;
+}
+#line{
+	background-color: skyblue;
+
+}
+
+/* Set width on the form input elements since they're 100% wide by default */
+input,
+select,
+textarea {
+	max-width: 280px;
+}
+
+/* Set padding to keep content from hitting the edges */
+
+
+.container {
+	width: 100%;
+}
+
+#resumeBody{
+
+	/* To center horizontally */
+
+
+ 
+}
+
+.slideShowImage img{
+	max-width: 100%;
+	margin-left: auto;
+	margin-right: auto;
+	display: block;
+	max-height: 450px;
+}
+#welcomeMessage{
+	font-family: 'Edwardian Script ITC';
+	font-size: 3.15em;
+	text-shadow: 2.15px 1.15px 1px green;
+ 
+}
+#leftColumn{
+	padding-left: 25px;
+}
+
+.homeTabHeadings{
+	font-family: 'Lucida Handwriting';
+	font-size: 3.15em;
+	color: deepskyblue;
+   
+}
+
+
+.portfolioImage{
+	max-width: 100%;
+	margin-left: auto;
+	margin-right: auto;
+	display: block;
+	box-shadow: 0 8px 32px black; 
+	max-height: 570px;
+}
+
+
+
+
+.portfolioSlideShowContainer, object{
+	box-shadow: 0 8px 32px black; 
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.downloadLinkDiv{
+	display: table;
+	margin: 0 auto;
+	font-family: Arial;
+}
+
+.rowContainer{
+	padding: 15px 15px 15px 15px;
+}
+
+.rowContainerEven{
+	background-color: #63D1F4;
+}
+
+.rowContainerOdd{
+   border: solid 4.5px #63D1F4;
+
+}
+
+
+.tooltip-inner {
+	background-color: red;
+	color: #fff;
+}
+
+.tooltip.top .tooltip-arrow {
+	border-top-color: red;
+	
+}
+
+.tooltip.right .tooltip-arrow {
+	border-right-color: red;
+}
+
+.tooltip.bottom .tooltip-arrow {
+	border-bottom-color: red;
+}
+
+.tooltip.left .tooltip-arrow {
+	border-left-color: red;
+}
+/*------------*/
+/* enable absolute positioning */
+.inner-addon { 
+	position: relative; 
+}
+.right-addon{
+	position: relative; 
+}
+
+/* style icon */
+.inner-addon .glyphicon{
+  position: absolute;
+  padding: 12px;
+  pointer-events: none;
+  font-size: 15px;
+}
+.glyphicon-remove-circle{
+	color: red;
+}
+
+.glyphicon-ok{
+	color: green;
+}
+
+/* align icon */
+.left-addon .glyphicon  { left:  0px;}
+.right-addon .glyphicon { right: 10px;}
+
+/* add padding  */
+.left-addon input  { padding-left:  30px; }
+.right-addon input { padding-right: 30px; }
+.right-addon i {
+	position: absolute;
+	right: 0px;
+	padding: 10px 15px;
+	pointer-events: none;
+}
+
+.resumeHeading{
+	text-align: center;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.footerImageDiv{
+	height: 65px;
+	width: 65px;
+	background-size: 100px 100px;
+}
+
+.portfolioParagraphDescriptions{
+	font-family: 'Times New Roman';
+}
+.footerImageDiv img {
+	width: 50px;
+	height: 50px;
+}
+
+#portfolioBody{
+   background-color: whitesmoke; 
+   border:1em solid deepskyblue;
+}
+.carousel-control.left, .carousel-control.right {
+	background-image: none;
+}
+
+
+iframe{
+	margin-left: auto; 
+	margin-right: auto; 
+	display:block; 
+	text-align:center;
+}
+
+.panelImg{
+	width: 100%;
+	max-height: 100%;
+	margin: 0 auto;
+	display: block;
+	text-align: center;
+	overflow: hidden;
+}
+
+.panel-body{
+   overflow: auto;
+   max-width: 100%;
+   height: 325px;
+   text-align: center;
+   margin: 0 auto;
+}
+
+.panelObj{
+	width: auto;
+	height: 590px;
+	margin: 0 auto;
+
+}
+.ssButton{
+	margin: 0 auto;
+	text-align: center;
+	display: block;
+	width: auto;
+}
+
+/*---------------*/
+/* Media Queries */
+@media (min-width: 420px) and (max-width: 768px){
+	.androidImg {
+	/*width: 45% !important; */
+	width: 50%;
+}
+
+	.panelImg{
+
+}
+}
+
+@media (min-width: 0px) and (max-width: 991px) {
+	.panelImg{
+		text-align: center;
+
+	}
+}
+
+@media (min-width: 0px) and (max-width: 991px){
+	#portfolioBody{
+		border: none;
+	}
+}
+@media (min-width: 716px) and (max-width: 809px){
+	.tabHeadings{
+		font-size: 12.5px;
+	}
+}
+@media (min-width: 669px) and (max-width: 716px){
+	.tabHeadings{
+		font-size: 11.25px;
+	}
+}
+
+@media (min-width: 0px) and (max-width: 668px){
+	.tabHeadings{
+		font-size: 15.35px;
+	}
+}
+
+@media (min-width: 992px){
+	.portfolioRowOdd{
+		font-size: 18px;
+	}
+
+		.portfolioRowEven{
+		margin-right: auto;
+		margin-left: auto;
+		padding: 35px;
+		background-clip: content-box;
+		color: white;
+		font-size: 18px;
+		font-family: 'Times New Roman';
+
+		
+	}
+
+
+}
+
+/* Portfolio Image adjustments */
+@media (min-width: 0px) and (max-width: 377px) {
+		.portfolioParagraphDescriptions{
+			font-size: .945em;
+		}
+
+   .carousel-caption{
+		font-size: .945em;
+		}
+
+
+}
+@media (min-width: 378px) and (max-width: 431px) {
+		.portfolioParagraphDescriptions{
+			font-size: 15.5px;
+		}
+		   .carousel-caption{
+		font-size: 15.5px;
+		}
+}
+
+
+/* END OF Portfolio Image adjustments */
+
+
+
+@media (min-width: 609px) and (max-width: 769px) {
+		.footerImageDiv img {
+		width: 50px;
+		height: 50px;
+		}
+
+		.footerImageDiv{
+			height: 60px;
+			width: 60px;
+			background-size: 100px 100px;
+		}
+
+		.slideShowImage img{
+				max-height: 360px;
+		}
+
+		#welcomeMessage{
+				font-size: 2.15em;
+		}
+}
+
+@media (min-width: 0px) and (max-width: 384px) {
+		.footerImageDiv img {
+		width: 35px;
+		height: 35px;
+		}
+
+		.footerImageDiv{
+			height: 50px;
+			width: 50px;
+			background-size: 100px 100px;
+		}
+
+		#welcomeMessage{
+				font-size: 1.75em;
+		}
+
+
+
+}
+
+@media (min-width: 385px) and (max-width: 608px) {
+
+	#welcomeMessage {
+		font-size: 55px;
+	}
+   .carousel-caption{
+		font-size: 15px;
+		}
+
+}
+
+@media (min-width: 0px) and (max-width: 767px) {
+	#resumeBody{
+		margin: 0 auto;
+		left: auto;
+		top: 10%
+	}
+}
+
+@media (min-width: 0px) and (max-width: 384px) {
+
+	   .slideShowImage img{
+		   max-height: 1000px;
+   }
+   .carousel-caption{
+		font-size: 12px;
+		}
+}
+
+/* Adjusting object width */
+@media (min-width: 473px) and (max-width: 645px) {
+	object{
+		max-width: 350px;
+	}
+}
+
+@media (min-width: 400px) and (max-width: 472px) {
+	object{
+		max-width: 280px;
+	}
+}
+
+@media (min-width: 368px) and (max-width: 398px) {
+	object{
+		max-width: 235px;
+	}
+}
+@media (min-width: 320px) and (max-width: 367px) {
+	object{
+		max-width: 200px;
+	}
+}
+/* End of adjusting object width*/
+
+@media (min-width: 609px) and (max-width: 633px) {
+	.portfolioImage2{
+		max-width: 500px;
+	}
+}
+
+
+/* 443 - 767 */
+@media (min-width: 0px) and (max-width: 767px) {
+
+/* align icon */
+
+.right-addon .glyphicon { right: 38px; top: 21px; visibility: hidden;}
+
+/* add padding  */
+
+
+}
+
+@media (min-width: 476px) and (max-width: 1038px) {
+
+	iframe{
+		width: 400px;
+		height:500px;
+	}
+}
+
+@media (min-width: 0px) and (max-width: 476px) {
+
+	iframe{
+		width: 320px;
+		height:500px;
+	}
+}
+
+
+
+
+/*--------------- HERE GOES CARD FLIPPING ANIMATION ----------------*/
+/* entire container, keeps perspective */
+.front, .back {
+	perspective: 1000;
+	 cursor: pointer;
+}
+	/* 
+	.flip-container:hover.flipper, .flip-container.hover .flipper {
+		transform: rotateY(180deg);
+	}
+	 */
+
+.flip-container, .front, .back {
+	width: 100%;
+	height: 75%;
+}
+
+/* flip speed goes here */
+.flipper {
+	transition: 0.6s;
+	transform-style: preserve-3d;
+
+	position: relative;
+}
+
+/* hide back of pane during swap */
+.front, .back {
+	backface-visibility: hidden;
+
+	top: 0;
+	left: 0;   
+}
+
+/* front pane, placed above back */
+.front {
+	z-index: 2;
+	/* for firefox 31 */
+	transform: rotateY(0deg);
+}
+
+/* back, initially hidden pane */
+.back {
+	transform: rotateY(180deg);
+	position: absolute;
+}
+
+/*---------------- END OF CARD FLIPPING ANIMATION ----------------*/

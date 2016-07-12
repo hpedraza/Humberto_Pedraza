@@ -1,0 +1,152 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewBag.Title</title>
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7/jquery.js"></script>
+</head>
+<body id="portfolioBody">
+    <div class="navbar navbar-default navbar-fixed-top">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                @Html.ActionLink("Humberto Pedraza", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
+            </div>
+            <div class="navbar-collapse collapse" id="Navbar-Collapse">
+                <ul class="nav navbar-nav navbar-right">
+                    <li>@Html.ActionLink("Home", "Index", "Home", new { area = "" }, null)</li>
+                    <li>@Html.ActionLink("Portfolio","Index","Portfolio")</li>
+                    <li><a href="#resume" id="resumeLink" data-toggle="modal">Resume</a></li>
+                    <li><a href="#contact" data-toggle="modal">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div class="container body-content">
+        @RenderBody()
+        <hr />
+        <footer>
+            <div class="row">
+                <div class="col-xs-6">
+                    <p>&copy; @DateTime.Now.Year - Humberto Pedraza Personal Website</p>
+                </div>
+                <div class="col-xs-2 footerImageDiv"><a href="https://www.facebook.com/humberto.pedraza.3"><img src="~/Images/facebook_glyphicon.png" /></a></div>
+                <div class="col-xs-2 footerImageDiv"><a href="https://twitter.com/prying23?lang=en"><img src="~/Images/Twitter_logo_glyphicon.png" /></a></div>
+                <div class="col-xs-2 footerImageDiv"><a href="https://www.instagram.com/betoo_23/"><img src="~/Images/intagram_gltphicon.png" /></a></div>
+            </div>
+        </footer>
+    </div>
+
+    <!-- Contact Modal -->
+    <div class="modal fade" id="contact">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">
+                        <span>&times;</span>
+                    </button>
+                    <h2>Contact</h2>
+                </div>
+                <div class="modal-body">
+                    <!-- Create contact form-->
+                    <form class="form-horizontal" id="contactForm" method="post" action="@Url.Action("Index","ProcessMessage")" role="form">
+                        <div class="form-group">
+                            <label class="col-xs-3" for="name">Your Name:</label>
+                            <div class="col-sm-5 inner-addon right-addon" id="nameFormGroup">
+                                <input type="text" name="contactersName" class="form-control" id="name" minlength="3" required />
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-xs-3" for="subject">Subject:</label>
+                            <div class="col-sm-5 inner-addon right-addon" id="subjectFormGroup">
+                                <input type="text" name="subject" class="form-control" id="subject" minlength="3" required />
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-xs-3" for="email">Email:</label>
+                            <div class="col-sm-5 inner-addon right-addon" id="emailFormGroup">
+                                <input type="email" name="email" class="form-control" id="email" minlength="3" required />
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-xs-3" for="message">Message:</label>
+                            <div class="col-sm-5 inner-addon right-addon" id="messageFormGroup">
+                                <textarea class="form-control" name="message" rows="5" id="message" minlength="10" onkeyup="countChar(this)" required></textarea>
+                            </div>
+                        </div>
+                        <button type="submit" class="btn btn-success submit" id="hiddenSendButton" style="visibility:hidden;">Send</button>
+
+                    </form>
+                </div><!-- Form div ends here-->
+                <div class="modal-footer">
+                    <button type="submit" class="btn btn-success submit" id="sendButton">Send</button>
+                    <button type="button" class="btn btn-warning" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    @* ResumePage Modal*@
+    <div class="modal fade out" id="resume" tabindex="-1" role="dialog" data-url="@Url.Action("GetResume","Home")">
+        <div id="resumeBody"></div>
+
+    </div>
+
+    @* Modals *@
+    <div class="modal fade" id="displayAndroidSS" tabindex="-1" role="dialog" data-url="@Url.Action("androidSS")">
+        <div id="androidBody"></div>
+
+    </div>
+
+    <div class="modal fade" id="displayCOne" tabindex="-1" role="dialog" data-url="@Url.Action("ConeSS")">
+        <div id="ConeBody"></div>
+
+    </div>
+
+    <div class="modal fade" id="displayCtwo" tabindex="-1" role="dialog" data-url="@Url.Action("CtwoSS")">
+        <div id="CtwoBody"></div>
+
+    </div>
+
+    <div class="modal fade" id="displayQ" tabindex="-1" role="dialog" data-url="@Url.Action("qSS")">
+        <div id="qBody"></div>
+
+    </div>
+
+    <div class="modal fade" id="displayGA" tabindex="-1" role="dialog" data-url="@Url.Action("gaSS")">
+        <div id="gaBody"></div>
+
+    </div>
+
+    <div class="modal fade" id="displayAnt" tabindex="-1" role="dialog" data-url="@Url.Action("antSS")">
+        <div id="antBody"></div>
+
+    </div>
+
+    <div class="modal fade" id="displayFit" tabindex="-1" role="dialog" data-url="@Url.Action("fitSS")">
+        <div id="fitBody"></div>
+
+    </div>
+
+    <div class="modal fade" id="displayRDB" tabindex="-1" role="dialog" data-url="@Url.Action("rdbSS")">
+        <div id="rdbBody"></div>
+
+    </div>
+
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    @RenderSection("scripts", required: false)
+    <script type="text/javascript" src="~/Scripts/AddedEffects.js"></script>
+    <script type="text/javascript" src="~/Scripts/ProjectDownload.js"></script>
+    <script type="text/javascript" src="~/Scripts/resume.js"></script>
+</body>
+</html>
